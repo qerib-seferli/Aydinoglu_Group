@@ -1,211 +1,279 @@
 <!doctype html>
 <html lang="az">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="NAR & NOOR - premium restoran saytı, menyu, rezervasiya və online sifariş."
-    />
-    <title>NAR & NOOR | Premium Restoran</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="AYDINOĞLU GROUP - Bərdə şəhərində premium mebel salonu." />
+    <title>AYDINOĞLU GROUP | Mebel Salonu</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="noise"></div>
-    <header class="site-header">
-      <a class="brand" href="#home" aria-label="Ana səhifə">
-        <span class="brand-mark">N</span>
+    <div class="ambient ambient-red"></div>
+    <div class="ambient ambient-gold"></div>
+
+    <header class="topbar" data-glass>
+      <a class="brand" href="#home" aria-label="AYDINOĞLU GROUP">
+        <span class="brand-mark">AG</span>
         <span>
-          <strong>NAR & NOOR</strong>
-          <small>fire dining</small>
+          <strong>AYDINOĞLU GROUP</strong>
+          <small>Mebel salonu</small>
         </span>
       </a>
-      <nav class="nav" aria-label="Sayt naviqasiyası">
-        <a href="#menu">Menyu</a>
-        <a href="#gallery">Qalereya</a>
-        <a href="#reserve">Rezerv</a>
+      <nav class="nav" aria-label="Esas menyu">
+        <a href="#products">Mebellər</a>
+        <a href="#rooms">Otaqlar</a>
+        <a href="#services">Xidmətlər</a>
         <a href="#contact">Əlaqə</a>
       </nav>
-      <button class="icon-btn menu-toggle" type="button" aria-label="Menyunu aç">☰</button>
-      <button class="cart-chip" type="button" data-open-cart>
-        <span>Səbət</span>
-        <strong data-cart-count>0</strong>
-      </button>
+      <div class="header-actions">
+        <button class="icon-button" id="themeToggle" aria-label="Tema dəyiş">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.9-.11-1.34a7 7 0 0 1-8.55-8.55C11.9 3.04 11.46 3 12 3Z"/></svg>
+        </button>
+        <a class="button ghost compact" href="#admin">Admin</a>
+        <button class="menu-button" id="menuButton" aria-label="Menyu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </header>
 
-    <main>
-      <section id="home" class="hero">
-        <div class="hero-media" aria-hidden="true"></div>
-        <div class="hero-content reveal">
-          <p class="eyebrow">Baku gecələri üçün premium dad ritualı</p>
-          <h1>NAR & NOOR</h1>
-          <p class="hero-copy">
-            Od üstündə hazırlanmış steyklər, şərq ədviyyatları, desert barı və gecə
-            atmosferi bir arada. Rezervasiya et, menyudan seç, sifarişini göndər.
-          </p>
+    <main id="home">
+      <section class="hero section-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Bərdə · Bayraq Meydanının yanı</p>
+          <h1>AYDINOĞLU GROUP</h1>
+          <p class="lead">Qonaq otağı, yataq, mətbəx və ofis üçün ölçüyə uyğun, zövqlü və dayanıqlı mebel həlləri.</p>
           <div class="hero-actions">
-            <a class="btn primary" href="#menu">Menyuya bax</a>
-            <a class="btn ghost" href="#reserve">Masa rezerv et</a>
+            <a class="button primary" href="#products">Kataloqa bax</a>
+            <a class="button neon" href="https://wa.me/994502097254" target="_blank" rel="noreferrer">WhatsApp yaz</a>
+          </div>
+          <div class="metrics" aria-label="Magaza ustunlukleri">
+            <div><strong id="metricProducts">0</strong><span>model</span></div>
+            <div><strong>24/7</strong><span>online sorğu</span></div>
+            <div><strong>1 il</strong><span>zəmanət</span></div>
           </div>
         </div>
-        <aside class="hero-panel reveal">
-          <span>Bu gün</span>
-          <strong>18:00 - 02:00</strong>
-          <p>Canlı DJ, açıq mətbəx, VIP lounge</p>
-        </aside>
+        <div class="hero-stage reveal">
+          <div class="stage-card">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=82" alt="Premium divan və salon mebeli" />
+            <div class="price-chip">
+              <span>Yeni kolleksiya</span>
+              <strong id="heroFeaturedPrice">Qiymət soruş</strong>
+            </div>
+          </div>
+          <div class="floating-panel">
+            <span class="pulse"></span>
+            <div>
+              <strong>Canlı stok</strong>
+              <small>Supabase ilə yenilənir</small>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section class="stats band">
-        <article>
-          <strong>48+</strong>
-          <span>imza yemək</span>
-        </article>
-        <article>
-          <strong>12 dəq</strong>
-          <span>orta təsdiq vaxtı</span>
-        </article>
-        <article>
-          <strong>4.9</strong>
-          <span>qonaq rəyi</span>
-        </article>
-        <article>
-          <strong>02:00</strong>
-          <span>gecə servis</span>
-        </article>
+      <section class="quick-strip reveal" aria-label="Elaqe melumatlari">
+        <a href="tel:+994502097255"><span>Zəng</span><strong>+994 50 209 72 55</strong></a>
+        <a href="https://wa.me/994502097254" target="_blank" rel="noreferrer"><span>WhatsApp</span><strong>+994 50 209 72 54</strong></a>
+        <a href="#contact"><span>Ünvan</span><strong>Bərdə Şəhər Bayraq Meydanının yanı</strong></a>
       </section>
 
-      <section id="menu" class="section menu-section">
+      <section class="section" id="products">
         <div class="section-head reveal">
-          <p class="eyebrow">Menyu</p>
-          <h2>Seçilmiş dadlar</h2>
-          <div class="filters" role="tablist" aria-label="Menyu kateqoriyaları">
-            <button class="filter active" type="button" data-filter="all">Hamısı</button>
-            <button class="filter" type="button" data-filter="hot">İsti</button>
-            <button class="filter" type="button" data-filter="grill">Grill</button>
-            <button class="filter" type="button" data-filter="dessert">Desert</button>
-            <button class="filter" type="button" data-filter="drink">İçki</button>
-          </div>
-        </div>
-        <div class="menu-grid" data-menu-grid aria-live="polite"></div>
-      </section>
-
-      <section id="gallery" class="gallery">
-        <div class="gallery-copy reveal">
-          <p class="eyebrow">Atmosfer</p>
-          <h2>Qara fon, qırmızı işıq, isti servis.</h2>
-          <p>
-            Kompakt salon planı, neon işıq zolaqları və maloçnu teksturalar brendi
-            premium, amma rahat göstərir.
-          </p>
-        </div>
-        <div class="gallery-strip reveal">
-          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80" alt="Restoran interyeri" />
-          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80" alt="Grill yemək" />
-          <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=80" alt="Desert" />
-        </div>
-      </section>
-
-      <section id="reserve" class="section reserve-section">
-        <div class="reserve-card reveal">
           <div>
-            <p class="eyebrow">Rezervasiya</p>
-            <h2>Masanı indi saxla</h2>
-            <p>Form Supabase bazasına yazılır. URL və anon key əlavə ediləndən sonra canlı işləyir.</p>
+            <p class="eyebrow">Kataloq</p>
+            <h2>Mebellər</h2>
           </div>
-          <form class="form" data-reservation-form>
-            <label>
-              Ad Soyad
-              <input name="full_name" required placeholder="Məs: Aysel Məmmədova" />
+          <div class="toolbar">
+            <label class="search">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.3-4.3M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z"/></svg>
+              <input id="searchInput" type="search" placeholder="Axtar..." />
             </label>
-            <label>
-              Telefon
-              <input name="phone" required placeholder="+994..." />
-            </label>
-            <label>
-              Tarix
-              <input name="reservation_date" type="date" required />
-            </label>
-            <label>
-              Saat
-              <input name="reservation_time" type="time" required />
-            </label>
-            <label>
-              Qonaq sayı
-              <input name="guests" type="number" min="1" max="24" value="2" required />
-            </label>
-            <label>
-              Qeyd
-              <textarea name="note" rows="3" placeholder="VIP, ad günü, pəncərə yanı..."></textarea>
-            </label>
-            <button class="btn primary wide" type="submit">Rezervasiyanı göndər</button>
-            <p class="form-status" data-reservation-status></p>
+            <select id="sortSelect" aria-label="Sıralama">
+              <option value="featured">Seçilmiş</option>
+              <option value="priceAsc">Ucuzdan bahaya</option>
+              <option value="priceDesc">Bahadan ucuza</option>
+              <option value="newest">Yeni</option>
+            </select>
+          </div>
+        </div>
+        <div class="category-tabs reveal" id="categoryTabs"></div>
+        <div class="product-grid" id="productGrid"></div>
+        <div class="empty-state" id="emptyProducts" hidden>Bu filtrə uyğun mebel tapılmadı.</div>
+      </section>
+
+      <section class="section compact-band" id="rooms">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Otaqlar</p>
+            <h2>Evin hər küncü üçün</h2>
+          </div>
+        </div>
+        <div class="room-grid" id="roomGrid"></div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Servis</p>
+            <h2>Mağaza təcrübəsi</h2>
+          </div>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal"><span>01</span><h3>Ölçü və planlama</h3><p>Məkanınıza uyğun en, boy, dərinlik və rəng kombinasiyası hazırlanır.</p></article>
+          <article class="service-card reveal"><span>02</span><h3>Sifariş qeydiyyatı</h3><p>Saytdan sorğu göndərin, admin paneldə statuslar idarə olunsun.</p></article>
+          <article class="service-card reveal"><span>03</span><h3>Çatdırılma</h3><p>Bərdə və ətraf rayonlar üçün çatdırılma qeydləri məhsul üzrə idarə edilir.</p></article>
+          <article class="service-card reveal"><span>04</span><h3>Zəmanət</h3><p>Material, ölçü və komplektasiya məlumatları hər məhsul kartında görünür.</p></article>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="contact-copy reveal">
+          <p class="eyebrow">Əlaqə</p>
+          <h2>Salonla əlaqə saxlayın</h2>
+          <p>Bəyəndiyiniz mebelin kodunu qeyd edin, ölçü və rəng istəyinizi yazın. Sorğu Supabase bazasında saxlanacaq.</p>
+          <div class="contact-list">
+            <a href="tel:+994502097255">Telefon: +994 50 209 72 55</a>
+            <a href="https://wa.me/994502097254" target="_blank" rel="noreferrer">WhatsApp: +994 50 209 72 54</a>
+            <span>Bərdə Şəhər Bayraq Meydanının yanı</span>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="leadForm">
+          <div class="form-row">
+            <label>Ad Soyad<input required name="name" autocomplete="name" /></label>
+            <label>Telefon<input required name="phone" autocomplete="tel" /></label>
+          </div>
+          <label>Maraqlandığınız məhsul<select name="product_id" id="leadProductSelect"></select></label>
+          <label>Qeyd<textarea name="message" rows="4" placeholder="Ölçü, rəng, büdcə və çatdırılma qeydi..."></textarea></label>
+          <button class="button primary" type="submit">Sorğu göndər</button>
+          <p class="form-note" id="leadStatus"></p>
+        </form>
+      </section>
+
+      <section class="admin-shell" id="admin" aria-label="Admin panel">
+        <div class="admin-login" id="adminLogin">
+          <div>
+            <p class="eyebrow">Admin</p>
+            <h2>İdarə paneli</h2>
+            <p>Supabase Auth ilə daxil olun. Admin səlahiyyəti SQL-də `profiles` cədvəlindən verilir.</p>
+          </div>
+          <form id="loginForm" class="login-form">
+            <label>Email<input required type="email" name="email" autocomplete="email" /></label>
+            <label>Parol<input required type="password" name="password" autocomplete="current-password" /></label>
+            <button class="button primary" type="submit">Daxil ol</button>
+            <p class="form-note" id="loginStatus"></p>
           </form>
         </div>
-      </section>
 
-      <section id="contact" class="contact band">
-        <div class="contact-info reveal">
-          <p class="eyebrow">Əlaqə</p>
-          <h2>Növbəti gecə planın hazırdır.</h2>
-          <p>Nizami küçəsi 71, Bakı · +994 50 000 71 71 · hello@narnoor.az</p>
+        <div class="admin-panel" id="adminPanel" hidden>
+          <aside class="admin-sidebar">
+            <strong>AYDINOĞLU Admin</strong>
+            <button class="admin-tab active" data-admin-tab="productsAdmin">Məhsullar</button>
+            <button class="admin-tab" data-admin-tab="categoriesAdmin">Kateqoriyalar</button>
+            <button class="admin-tab" data-admin-tab="ordersAdmin">Sorğular</button>
+            <button class="admin-tab" data-admin-tab="settingsAdmin">Ayarlar</button>
+            <button class="button ghost" id="logoutButton">Çıxış</button>
+          </aside>
+          <div class="admin-content">
+            <section class="admin-view active" id="productsAdmin">
+              <div class="admin-view-head"><h3>Məhsullar</h3><button class="button neon" id="newProductButton">Yeni məhsul</button></div>
+              <form class="admin-form" id="productForm">
+                <input type="hidden" name="id" />
+                <div class="form-row"><label>Ad<input required name="name" /></label><label>Kod<input name="sku" placeholder="AG-001" /></label></div>
+                <div class="form-row"><label>Kateqoriya<select name="category_id" id="productCategorySelect"></select></label><label>Qiymət AZN<input type="number" min="0" step="1" name="price" /></label></div>
+                <div class="form-row"><label>Endirimli qiymət<input type="number" min="0" step="1" name="sale_price" /></label><label>Stok<select name="stock_status"><option value="in_stock">Stokda var</option><option value="preorder">Sifarişlə</option><option value="sold_out">Bitib</option></select></label></div>
+                <div class="form-row"><label>Rənglər<input name="colors" placeholder="Qara, qəhvəyi, ağ" /></label><label>Material<input name="material" placeholder="MDF, taxta, parça" /></label></div>
+                <div class="dimension-grid">
+                  <label>En (sm)<input type="number" name="width_cm" /></label>
+                  <label>Hündürlük (sm)<input type="number" name="height_cm" /></label>
+                  <label>Uzunluq (sm)<input type="number" name="length_cm" /></label>
+                  <label>Dərinlik (sm)<input type="number" name="depth_cm" /></label>
+                </div>
+                <label>Şəkil URL<input name="image_url" placeholder="https://..." /></label>
+                <label>Təsvir<textarea name="description" rows="3"></textarea></label>
+                <div class="switch-row">
+                  <label><input type="checkbox" name="featured" /> Seçilmiş</label>
+                  <label><input type="checkbox" name="is_active" checked /> Aktiv</label>
+                </div>
+                <button class="button primary" type="submit">Yadda saxla</button>
+                <p class="form-note" id="productStatus"></p>
+              </form>
+              <div class="admin-list" id="adminProductList"></div>
+            </section>
+
+            <section class="admin-view" id="categoriesAdmin">
+              <div class="admin-view-head"><h3>Kateqoriyalar</h3></div>
+              <form class="admin-form inline-form" id="categoryForm">
+                <input type="hidden" name="id" />
+                <label>Ad<input required name="name" placeholder="Qonaq otağı" /></label>
+                <label>Slug<input name="slug" placeholder="qonaq-otagi" /></label>
+                <button class="button primary" type="submit">Yadda saxla</button>
+                <p class="form-note" id="categoryStatus"></p>
+              </form>
+              <div class="admin-list" id="adminCategoryList"></div>
+            </section>
+
+            <section class="admin-view" id="ordersAdmin">
+              <div class="admin-view-head"><h3>Müştəri sorğuları</h3><button class="button ghost" id="refreshLeadsButton">Yenilə</button></div>
+              <div class="admin-list" id="leadList"></div>
+            </section>
+
+            <section class="admin-view" id="settingsAdmin">
+              <div class="admin-view-head"><h3>Mağaza ayarları</h3></div>
+              <form class="admin-form" id="settingsForm">
+                <label>Mağaza adı<input required name="store_name" /></label>
+                <div class="form-row"><label>Telefon<input name="phone" /></label><label>WhatsApp<input name="whatsapp" /></label></div>
+                <label>Ünvan<input name="address" /></label>
+                <label>Instagram<input name="instagram_url" placeholder="https://instagram.com/..." /></label>
+                <label>İş saatları<input name="working_hours" placeholder="Hər gün 09:00-20:00" /></label>
+                <button class="button primary" type="submit">Ayarları saxla</button>
+                <p class="form-note" id="settingsStatus"></p>
+              </form>
+            </section>
+          </div>
         </div>
-        <form class="newsletter reveal" data-newsletter-form>
-          <input name="email" type="email" required placeholder="Email ünvanın" />
-          <button class="btn primary" type="submit">Abunə ol</button>
-          <span data-newsletter-status></span>
-        </form>
       </section>
     </main>
 
-    <aside class="cart-drawer" data-cart-drawer aria-hidden="true">
-      <div class="drawer-head">
-        <div>
-          <span>Sifariş</span>
-          <strong>Səbətin</strong>
-        </div>
-        <button class="icon-btn" type="button" data-close-cart aria-label="Səbəti bağla">×</button>
-      </div>
-      <div class="cart-items" data-cart-items></div>
-      <form class="checkout" data-order-form>
-        <input name="customer_name" required placeholder="Adınız" />
-        <input name="phone" required placeholder="Telefon" />
-        <input name="address" required placeholder="Ünvan" />
-        <textarea name="note" rows="2" placeholder="Qeyd"></textarea>
-        <div class="total-row">
-          <span>Cəmi</span>
-          <strong data-cart-total>0 AZN</strong>
-        </div>
-        <button class="btn primary wide" type="submit">Sifarişi göndər</button>
-        <p class="form-status" data-order-status></p>
-      </form>
-    </aside>
-    <div class="backdrop" data-backdrop></div>
-
-    <template id="menu-card-template">
-      <article class="menu-card reveal">
-        <img data-img alt="" />
-        <div class="menu-card-body">
-          <div>
-            <span class="tag" data-category></span>
-            <h3 data-title></h3>
-            <p data-description></p>
+    <div class="modal" id="productModal" hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <article class="modal-card">
+        <button class="icon-button close" data-close-modal aria-label="Bağla">×</button>
+        <img id="modalImage" alt="" />
+        <div class="modal-body">
+          <p class="eyebrow" id="modalSku"></p>
+          <h3 id="modalTitle"></h3>
+          <p id="modalDescription"></p>
+          <div class="spec-grid" id="modalSpecs"></div>
+          <div class="modal-actions">
+            <a class="button primary" id="modalCall" href="tel:+994502097255">Zəng et</a>
+            <a class="button neon" id="modalWhatsapp" href="https://wa.me/994502097254" target="_blank" rel="noreferrer">WhatsApp</a>
           </div>
-          <div class="menu-bottom">
-            <strong data-price></strong>
-            <button class="add-btn" type="button" data-add>Səbətə at</button>
+        </div>
+      </article>
+    </div>
+
+    <template id="productCardTemplate">
+      <article class="product-card reveal">
+        <button class="product-image" type="button">
+          <img alt="" />
+          <span class="stock-badge"></span>
+        </button>
+        <div class="product-body">
+          <div class="product-title-row"><h3></h3><span class="sku"></span></div>
+          <p class="product-desc"></p>
+          <div class="chips"></div>
+          <div class="product-bottom">
+            <strong class="price"></strong>
+            <button class="button ghost details-button">Detallar</button>
           </div>
         </div>
       </article>
     </template>
 
-    <script src="config.js"></script>
-    <script src="app.js"></script>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="./config.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>
