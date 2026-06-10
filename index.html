@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="NAR & NOOR - premium restoran saytı, menyu, rezervasiya və online sifariş."
+    />
+    <title>NAR & NOOR | Premium Restoran</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  </head>
+  <body>
+    <div class="noise"></div>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Ana səhifə">
+        <span class="brand-mark">N</span>
+        <span>
+          <strong>NAR & NOOR</strong>
+          <small>fire dining</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Sayt naviqasiyası">
+        <a href="#menu">Menyu</a>
+        <a href="#gallery">Qalereya</a>
+        <a href="#reserve">Rezerv</a>
+        <a href="#contact">Əlaqə</a>
+      </nav>
+      <button class="icon-btn menu-toggle" type="button" aria-label="Menyunu aç">☰</button>
+      <button class="cart-chip" type="button" data-open-cart>
+        <span>Səbət</span>
+        <strong data-cart-count>0</strong>
+      </button>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-media" aria-hidden="true"></div>
+        <div class="hero-content reveal">
+          <p class="eyebrow">Baku gecələri üçün premium dad ritualı</p>
+          <h1>NAR & NOOR</h1>
+          <p class="hero-copy">
+            Od üstündə hazırlanmış steyklər, şərq ədviyyatları, desert barı və gecə
+            atmosferi bir arada. Rezervasiya et, menyudan seç, sifarişini göndər.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#menu">Menyuya bax</a>
+            <a class="btn ghost" href="#reserve">Masa rezerv et</a>
+          </div>
+        </div>
+        <aside class="hero-panel reveal">
+          <span>Bu gün</span>
+          <strong>18:00 - 02:00</strong>
+          <p>Canlı DJ, açıq mətbəx, VIP lounge</p>
+        </aside>
+      </section>
+
+      <section class="stats band">
+        <article>
+          <strong>48+</strong>
+          <span>imza yemək</span>
+        </article>
+        <article>
+          <strong>12 dəq</strong>
+          <span>orta təsdiq vaxtı</span>
+        </article>
+        <article>
+          <strong>4.9</strong>
+          <span>qonaq rəyi</span>
+        </article>
+        <article>
+          <strong>02:00</strong>
+          <span>gecə servis</span>
+        </article>
+      </section>
+
+      <section id="menu" class="section menu-section">
+        <div class="section-head reveal">
+          <p class="eyebrow">Menyu</p>
+          <h2>Seçilmiş dadlar</h2>
+          <div class="filters" role="tablist" aria-label="Menyu kateqoriyaları">
+            <button class="filter active" type="button" data-filter="all">Hamısı</button>
+            <button class="filter" type="button" data-filter="hot">İsti</button>
+            <button class="filter" type="button" data-filter="grill">Grill</button>
+            <button class="filter" type="button" data-filter="dessert">Desert</button>
+            <button class="filter" type="button" data-filter="drink">İçki</button>
+          </div>
+        </div>
+        <div class="menu-grid" data-menu-grid aria-live="polite"></div>
+      </section>
+
+      <section id="gallery" class="gallery">
+        <div class="gallery-copy reveal">
+          <p class="eyebrow">Atmosfer</p>
+          <h2>Qara fon, qırmızı işıq, isti servis.</h2>
+          <p>
+            Kompakt salon planı, neon işıq zolaqları və maloçnu teksturalar brendi
+            premium, amma rahat göstərir.
+          </p>
+        </div>
+        <div class="gallery-strip reveal">
+          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80" alt="Restoran interyeri" />
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80" alt="Grill yemək" />
+          <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=80" alt="Desert" />
+        </div>
+      </section>
+
+      <section id="reserve" class="section reserve-section">
+        <div class="reserve-card reveal">
+          <div>
+            <p class="eyebrow">Rezervasiya</p>
+            <h2>Masanı indi saxla</h2>
+            <p>Form Supabase bazasına yazılır. URL və anon key əlavə ediləndən sonra canlı işləyir.</p>
+          </div>
+          <form class="form" data-reservation-form>
+            <label>
+              Ad Soyad
+              <input name="full_name" required placeholder="Məs: Aysel Məmmədova" />
+            </label>
+            <label>
+              Telefon
+              <input name="phone" required placeholder="+994..." />
+            </label>
+            <label>
+              Tarix
+              <input name="reservation_date" type="date" required />
+            </label>
+            <label>
+              Saat
+              <input name="reservation_time" type="time" required />
+            </label>
+            <label>
+              Qonaq sayı
+              <input name="guests" type="number" min="1" max="24" value="2" required />
+            </label>
+            <label>
+              Qeyd
+              <textarea name="note" rows="3" placeholder="VIP, ad günü, pəncərə yanı..."></textarea>
+            </label>
+            <button class="btn primary wide" type="submit">Rezervasiyanı göndər</button>
+            <p class="form-status" data-reservation-status></p>
+          </form>
+        </div>
+      </section>
+
+      <section id="contact" class="contact band">
+        <div class="contact-info reveal">
+          <p class="eyebrow">Əlaqə</p>
+          <h2>Növbəti gecə planın hazırdır.</h2>
+          <p>Nizami küçəsi 71, Bakı · +994 50 000 71 71 · hello@narnoor.az</p>
+        </div>
+        <form class="newsletter reveal" data-newsletter-form>
+          <input name="email" type="email" required placeholder="Email ünvanın" />
+          <button class="btn primary" type="submit">Abunə ol</button>
+          <span data-newsletter-status></span>
+        </form>
+      </section>
+    </main>
+
+    <aside class="cart-drawer" data-cart-drawer aria-hidden="true">
+      <div class="drawer-head">
+        <div>
+          <span>Sifariş</span>
+          <strong>Səbətin</strong>
+        </div>
+        <button class="icon-btn" type="button" data-close-cart aria-label="Səbəti bağla">×</button>
+      </div>
+      <div class="cart-items" data-cart-items></div>
+      <form class="checkout" data-order-form>
+        <input name="customer_name" required placeholder="Adınız" />
+        <input name="phone" required placeholder="Telefon" />
+        <input name="address" required placeholder="Ünvan" />
+        <textarea name="note" rows="2" placeholder="Qeyd"></textarea>
+        <div class="total-row">
+          <span>Cəmi</span>
+          <strong data-cart-total>0 AZN</strong>
+        </div>
+        <button class="btn primary wide" type="submit">Sifarişi göndər</button>
+        <p class="form-status" data-order-status></p>
+      </form>
+    </aside>
+    <div class="backdrop" data-backdrop></div>
+
+    <template id="menu-card-template">
+      <article class="menu-card reveal">
+        <img data-img alt="" />
+        <div class="menu-card-body">
+          <div>
+            <span class="tag" data-category></span>
+            <h3 data-title></h3>
+            <p data-description></p>
+          </div>
+          <div class="menu-bottom">
+            <strong data-price></strong>
+            <button class="add-btn" type="button" data-add>Səbətə at</button>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
