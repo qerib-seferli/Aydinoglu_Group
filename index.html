@@ -1,279 +1,237 @@
 <!doctype html>
 <html lang="az">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="AYDINOĞLU GROUP - Bərdə şəhərində premium mebel salonu." />
-    <title>AYDINOĞLU GROUP | Mebel Salonu</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <div class="ambient ambient-red"></div>
-    <div class="ambient ambient-gold"></div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AYDINOĞLU GROUP | Bərdə Mebel Salonu</title>
+  <meta name="description" content="AYDINOĞLU GROUP - Bərdə şəhərində mebel salonu. Qonaq otağı, yataq otağı, mətbəx, ofis və sifarişlə mebel həlləri." />
+  <meta name="theme-color" content="#111111" />
 
-    <header class="topbar" data-glass>
-      <a class="brand" href="#home" aria-label="AYDINOĞLU GROUP">
-        <span class="brand-mark">AG</span>
-        <span>
-          <strong>AYDINOĞLU GROUP</strong>
-          <small>Mebel salonu</small>
-        </span>
-      </a>
-      <nav class="nav" aria-label="Esas menyu">
-        <a href="#products">Mebellər</a>
-        <a href="#rooms">Otaqlar</a>
-        <a href="#services">Xidmətlər</a>
-        <a href="#contact">Əlaqə</a>
-      </nav>
-      <div class="header-actions">
-        <button class="icon-button" id="themeToggle" aria-label="Tema dəyiş">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.9-.11-1.34a7 7 0 0 1-8.55-8.55C11.9 3.04 11.46 3 12 3Z"/></svg>
-        </button>
-        <a class="button ghost compact" href="#admin">Admin</a>
-        <button class="menu-button" id="menuButton" aria-label="Menyu">
-          <span></span><span></span><span></span>
-        </button>
+  <meta property="og:title" content="AYDINOĞLU GROUP | Mebel Salonu" />
+  <meta property="og:description" content="Bərdə şəhərində modern və zövqlü mebel seçimləri." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home">
+      <img src="./Foto/Aydinoglu_mebel_berde_logo.jpg" alt="AYDINOĞLU GROUP logo" />
+      <span>
+        <strong>AYDINOĞLU GROUP</strong>
+        <small>Bərdə mebel salonu</small>
+      </span>
+    </a>
+
+    <nav class="nav" id="mainNav">
+      <a href="#products">Məhsullar</a>
+      <a href="#rooms">Otaqlar</a>
+      <a href="#services">Xidmətlər</a>
+      <a href="#contact">Əlaqə</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Menyu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-text reveal">
+        <span class="mini-label">Bərdə · Bayraq Meydanının yanı</span>
+        <h1>Ev üçün zövqlü, rahat və uzunömürlü mebellər</h1>
+        <p>
+          AYDINOĞLU GROUP qonaq otağı, yataq otağı, mətbəx, ofis və sifarişlə mebel seçimləri təqdim edir.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#products">Məhsullara bax</a>
+          <a class="btn soft" href="https://wa.me/994502097254" target="_blank" rel="noreferrer">WhatsApp</a>
+        </div>
+
+        <div class="hero-info">
+          <div><b id="productCount">0</b><span>Məhsul</span></div>
+          <div><b>1 il</b><span>Zəmanət</span></div>
+          <div><b>09:00</b><span>Hər gün açıq</span></div>
+        </div>
       </div>
-    </header>
 
-    <main id="home">
-      <section class="hero section-grid">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Bərdə · Bayraq Meydanının yanı</p>
-          <h1>AYDINOĞLU GROUP</h1>
-          <p class="lead">Qonaq otağı, yataq, mətbəx və ofis üçün ölçüyə uyğun, zövqlü və dayanıqlı mebel həlləri.</p>
-          <div class="hero-actions">
-            <a class="button primary" href="#products">Kataloqa bax</a>
-            <a class="button neon" href="https://wa.me/994502097254" target="_blank" rel="noreferrer">WhatsApp yaz</a>
-          </div>
-          <div class="metrics" aria-label="Magaza ustunlukleri">
-            <div><strong id="metricProducts">0</strong><span>model</span></div>
-            <div><strong>24/7</strong><span>online sorğu</span></div>
-            <div><strong>1 il</strong><span>zəmanət</span></div>
-          </div>
+      <div class="hero-card reveal">
+        <img id="heroImage" src="./Foto/Aydinoglu_mebel_berde_logo.jpg" alt="AYDINOĞLU GROUP mebel" />
+        <div class="hero-chip">
+          <span>Yeni kolleksiya</span>
+          <strong id="heroProductName">AYDINOĞLU GROUP</strong>
         </div>
-        <div class="hero-stage reveal">
-          <div class="stage-card">
-            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=82" alt="Premium divan və salon mebeli" />
-            <div class="price-chip">
-              <span>Yeni kolleksiya</span>
-              <strong id="heroFeaturedPrice">Qiymət soruş</strong>
-            </div>
-          </div>
-          <div class="floating-panel">
-            <span class="pulse"></span>
-            <div>
-              <strong>Canlı stok</strong>
-              <small>Supabase ilə yenilənir</small>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="quick-strip reveal" aria-label="Elaqe melumatlari">
-        <a href="tel:+994502097255"><span>Zəng</span><strong>+994 50 209 72 55</strong></a>
-        <a href="https://wa.me/994502097254" target="_blank" rel="noreferrer"><span>WhatsApp</span><strong>+994 50 209 72 54</strong></a>
-        <a href="#contact"><span>Ünvan</span><strong>Bərdə Şəhər Bayraq Meydanının yanı</strong></a>
-      </section>
+    <section class="quick-contact reveal">
+      <a href="tel:+994502097255">
+        <span>Telefon</span>
+        <b>+994 50 209 72 55</b>
+      </a>
+      <a href="https://wa.me/994502097254" target="_blank" rel="noreferrer">
+        <span>WhatsApp</span>
+        <b>+994 50 209 72 54</b>
+      </a>
+      <a href="#contact">
+        <span>Ünvan</span>
+        <b>Bərdə, Bayraq Meydanının yanı</b>
+      </a>
+    </section>
 
-      <section class="section" id="products">
-        <div class="section-head reveal">
-          <div>
-            <p class="eyebrow">Kataloq</p>
-            <h2>Mebellər</h2>
-          </div>
-          <div class="toolbar">
-            <label class="search">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.3-4.3M10.8 18a7.2 7.2 0 1 1 0-14.4 7.2 7.2 0 0 1 0 14.4Z"/></svg>
-              <input id="searchInput" type="search" placeholder="Axtar..." />
-            </label>
-            <select id="sortSelect" aria-label="Sıralama">
-              <option value="featured">Seçilmiş</option>
-              <option value="priceAsc">Ucuzdan bahaya</option>
-              <option value="priceDesc">Bahadan ucuza</option>
-              <option value="newest">Yeni</option>
-            </select>
-          </div>
-        </div>
-        <div class="category-tabs reveal" id="categoryTabs"></div>
-        <div class="product-grid" id="productGrid"></div>
-        <div class="empty-state" id="emptyProducts" hidden>Bu filtrə uyğun mebel tapılmadı.</div>
-      </section>
-
-      <section class="section compact-band" id="rooms">
-        <div class="section-head reveal">
-          <div>
-            <p class="eyebrow">Otaqlar</p>
-            <h2>Evin hər küncü üçün</h2>
-          </div>
-        </div>
-        <div class="room-grid" id="roomGrid"></div>
-      </section>
-
-      <section class="section" id="services">
-        <div class="section-head reveal">
-          <div>
-            <p class="eyebrow">Servis</p>
-            <h2>Mağaza təcrübəsi</h2>
-          </div>
-        </div>
-        <div class="service-grid">
-          <article class="service-card reveal"><span>01</span><h3>Ölçü və planlama</h3><p>Məkanınıza uyğun en, boy, dərinlik və rəng kombinasiyası hazırlanır.</p></article>
-          <article class="service-card reveal"><span>02</span><h3>Sifariş qeydiyyatı</h3><p>Saytdan sorğu göndərin, admin paneldə statuslar idarə olunsun.</p></article>
-          <article class="service-card reveal"><span>03</span><h3>Çatdırılma</h3><p>Bərdə və ətraf rayonlar üçün çatdırılma qeydləri məhsul üzrə idarə edilir.</p></article>
-          <article class="service-card reveal"><span>04</span><h3>Zəmanət</h3><p>Material, ölçü və komplektasiya məlumatları hər məhsul kartında görünür.</p></article>
-        </div>
-      </section>
-
-      <section class="section contact-section" id="contact">
-        <div class="contact-copy reveal">
-          <p class="eyebrow">Əlaqə</p>
-          <h2>Salonla əlaqə saxlayın</h2>
-          <p>Bəyəndiyiniz mebelin kodunu qeyd edin, ölçü və rəng istəyinizi yazın. Sorğu Supabase bazasında saxlanacaq.</p>
-          <div class="contact-list">
-            <a href="tel:+994502097255">Telefon: +994 50 209 72 55</a>
-            <a href="https://wa.me/994502097254" target="_blank" rel="noreferrer">WhatsApp: +994 50 209 72 54</a>
-            <span>Bərdə Şəhər Bayraq Meydanının yanı</span>
-          </div>
-        </div>
-        <form class="contact-form reveal" id="leadForm">
-          <div class="form-row">
-            <label>Ad Soyad<input required name="name" autocomplete="name" /></label>
-            <label>Telefon<input required name="phone" autocomplete="tel" /></label>
-          </div>
-          <label>Maraqlandığınız məhsul<select name="product_id" id="leadProductSelect"></select></label>
-          <label>Qeyd<textarea name="message" rows="4" placeholder="Ölçü, rəng, büdcə və çatdırılma qeydi..."></textarea></label>
-          <button class="button primary" type="submit">Sorğu göndər</button>
-          <p class="form-note" id="leadStatus"></p>
-        </form>
-      </section>
-
-      <section class="admin-shell" id="admin" aria-label="Admin panel">
-        <div class="admin-login" id="adminLogin">
-          <div>
-            <p class="eyebrow">Admin</p>
-            <h2>İdarə paneli</h2>
-            <p>Supabase Auth ilə daxil olun. Admin səlahiyyəti SQL-də `profiles` cədvəlindən verilir.</p>
-          </div>
-          <form id="loginForm" class="login-form">
-            <label>Email<input required type="email" name="email" autocomplete="email" /></label>
-            <label>Parol<input required type="password" name="password" autocomplete="current-password" /></label>
-            <button class="button primary" type="submit">Daxil ol</button>
-            <p class="form-note" id="loginStatus"></p>
-          </form>
+    <section class="section" id="products">
+      <div class="section-head reveal">
+        <div>
+          <span class="mini-label">Kataloq</span>
+          <h2>Məhsullar</h2>
         </div>
 
-        <div class="admin-panel" id="adminPanel" hidden>
-          <aside class="admin-sidebar">
-            <strong>AYDINOĞLU Admin</strong>
-            <button class="admin-tab active" data-admin-tab="productsAdmin">Məhsullar</button>
-            <button class="admin-tab" data-admin-tab="categoriesAdmin">Kateqoriyalar</button>
-            <button class="admin-tab" data-admin-tab="ordersAdmin">Sorğular</button>
-            <button class="admin-tab" data-admin-tab="settingsAdmin">Ayarlar</button>
-            <button class="button ghost" id="logoutButton">Çıxış</button>
-          </aside>
-          <div class="admin-content">
-            <section class="admin-view active" id="productsAdmin">
-              <div class="admin-view-head"><h3>Məhsullar</h3><button class="button neon" id="newProductButton">Yeni məhsul</button></div>
-              <form class="admin-form" id="productForm">
-                <input type="hidden" name="id" />
-                <div class="form-row"><label>Ad<input required name="name" /></label><label>Kod<input name="sku" placeholder="AG-001" /></label></div>
-                <div class="form-row"><label>Kateqoriya<select name="category_id" id="productCategorySelect"></select></label><label>Qiymət AZN<input type="number" min="0" step="1" name="price" /></label></div>
-                <div class="form-row"><label>Endirimli qiymət<input type="number" min="0" step="1" name="sale_price" /></label><label>Stok<select name="stock_status"><option value="in_stock">Stokda var</option><option value="preorder">Sifarişlə</option><option value="sold_out">Bitib</option></select></label></div>
-                <div class="form-row"><label>Rənglər<input name="colors" placeholder="Qara, qəhvəyi, ağ" /></label><label>Material<input name="material" placeholder="MDF, taxta, parça" /></label></div>
-                <div class="dimension-grid">
-                  <label>En (sm)<input type="number" name="width_cm" /></label>
-                  <label>Hündürlük (sm)<input type="number" name="height_cm" /></label>
-                  <label>Uzunluq (sm)<input type="number" name="length_cm" /></label>
-                  <label>Dərinlik (sm)<input type="number" name="depth_cm" /></label>
-                </div>
-                <label>Şəkil URL<input name="image_url" placeholder="https://..." /></label>
-                <label>Təsvir<textarea name="description" rows="3"></textarea></label>
-                <div class="switch-row">
-                  <label><input type="checkbox" name="featured" /> Seçilmiş</label>
-                  <label><input type="checkbox" name="is_active" checked /> Aktiv</label>
-                </div>
-                <button class="button primary" type="submit">Yadda saxla</button>
-                <p class="form-note" id="productStatus"></p>
-              </form>
-              <div class="admin-list" id="adminProductList"></div>
-            </section>
-
-            <section class="admin-view" id="categoriesAdmin">
-              <div class="admin-view-head"><h3>Kateqoriyalar</h3></div>
-              <form class="admin-form inline-form" id="categoryForm">
-                <input type="hidden" name="id" />
-                <label>Ad<input required name="name" placeholder="Qonaq otağı" /></label>
-                <label>Slug<input name="slug" placeholder="qonaq-otagi" /></label>
-                <button class="button primary" type="submit">Yadda saxla</button>
-                <p class="form-note" id="categoryStatus"></p>
-              </form>
-              <div class="admin-list" id="adminCategoryList"></div>
-            </section>
-
-            <section class="admin-view" id="ordersAdmin">
-              <div class="admin-view-head"><h3>Müştəri sorğuları</h3><button class="button ghost" id="refreshLeadsButton">Yenilə</button></div>
-              <div class="admin-list" id="leadList"></div>
-            </section>
-
-            <section class="admin-view" id="settingsAdmin">
-              <div class="admin-view-head"><h3>Mağaza ayarları</h3></div>
-              <form class="admin-form" id="settingsForm">
-                <label>Mağaza adı<input required name="store_name" /></label>
-                <div class="form-row"><label>Telefon<input name="phone" /></label><label>WhatsApp<input name="whatsapp" /></label></div>
-                <label>Ünvan<input name="address" /></label>
-                <label>Instagram<input name="instagram_url" placeholder="https://instagram.com/..." /></label>
-                <label>İş saatları<input name="working_hours" placeholder="Hər gün 09:00-20:00" /></label>
-                <button class="button primary" type="submit">Ayarları saxla</button>
-                <p class="form-note" id="settingsStatus"></p>
-              </form>
-            </section>
-          </div>
+        <div class="tools">
+          <input id="searchInput" type="search" placeholder="Axtar..." />
+          <select id="sortSelect">
+            <option value="featured">Seçilmiş</option>
+            <option value="newest">Yeni</option>
+            <option value="priceAsc">Ucuzdan bahaya</option>
+            <option value="priceDesc">Bahadan ucuza</option>
+          </select>
         </div>
-      </section>
-    </main>
+      </div>
 
-    <div class="modal" id="productModal" hidden>
-      <div class="modal-backdrop" data-close-modal></div>
-      <article class="modal-card">
-        <button class="icon-button close" data-close-modal aria-label="Bağla">×</button>
-        <img id="modalImage" alt="" />
-        <div class="modal-body">
-          <p class="eyebrow" id="modalSku"></p>
-          <h3 id="modalTitle"></h3>
-          <p id="modalDescription"></p>
-          <div class="spec-grid" id="modalSpecs"></div>
-          <div class="modal-actions">
-            <a class="button primary" id="modalCall" href="tel:+994502097255">Zəng et</a>
-            <a class="button neon" id="modalWhatsapp" href="https://wa.me/994502097254" target="_blank" rel="noreferrer">WhatsApp</a>
-          </div>
+      <div class="category-tabs reveal" id="categoryTabs"></div>
+      <div class="product-grid" id="productGrid"></div>
+      <p class="empty" id="emptyProducts" hidden>Məhsul tapılmadı.</p>
+    </section>
+
+    <section class="section soft-section" id="rooms">
+      <div class="section-head reveal">
+        <div>
+          <span class="mini-label">Otaqlar</span>
+          <h2>Evin hər hissəsi üçün</h2>
         </div>
-      </article>
+      </div>
+
+      <div class="room-grid">
+        <article class="room-card reveal"><span>Qonaq otağı</span></article>
+        <article class="room-card reveal"><span>Yataq otağı</span></article>
+        <article class="room-card reveal"><span>Mətbəx</span></article>
+        <article class="room-card reveal"><span>Ofis</span></article>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="section-head reveal">
+        <div>
+          <span class="mini-label">Xidmətlər</span>
+          <h2>Mağaza təcrübəsi</h2>
+        </div>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card reveal"><b>01</b><h3>Ölçü və məsləhət</h3><p>Məkanınıza uyğun ölçü, rəng və model seçimi.</p></article>
+        <article class="service-card reveal"><b>02</b><h3>Sifarişlə mebel</h3><p>İstəyə uyğun dizayn və material seçimi.</p></article>
+        <article class="service-card reveal"><b>03</b><h3>Çatdırılma</h3><p>Bərdə və ətraf ərazilər üzrə çatdırılma.</p></article>
+        <article class="service-card reveal"><b>04</b><h3>Zəmanət</h3><p>Məhsul məlumatları və satış sonrası dəstək.</p></article>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="contact-text reveal">
+        <span class="mini-label">Əlaqə</span>
+        <h2>Bizimlə əlaqə saxlayın</h2>
+        <p>Bəyəndiyiniz məhsul haqqında sorğu göndərin. Salon əməkdaşı sizinlə əlaqə saxlayacaq.</p>
+
+        <div class="contact-list">
+          <a href="tel:+994502097255">+994 50 209 72 55</a>
+          <a href="https://wa.me/994502097254" target="_blank" rel="noreferrer">WhatsApp: +994 50 209 72 54</a>
+          <a href="https://www.instagram.com/aydinoglu_mebel_berde?igsh=MTUwZW15OG01dHlweg==" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="https://www.tiktok.com/@aydinoglu_mebel_berde?_r=1&_t=ZS-9781rpFnJX2" target="_blank" rel="noreferrer">TikTok</a>
+          <span>Bərdə Şəhər Bayraq Meydanının yanı</span>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="leadForm">
+        <label>Ad Soyad<input required name="name" autocomplete="name" /></label>
+        <label>Telefon<input required name="phone" autocomplete="tel" /></label>
+        <label>Məhsul<select name="product_id" id="leadProductSelect"></select></label>
+        <label>Qeyd<textarea name="message" rows="4" placeholder="Məhsul, rəng, ölçü və çatdırılma qeydi..."></textarea></label>
+        <button class="btn primary" type="submit">Sorğu göndər</button>
+        <p class="form-note" id="leadStatus"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <strong>AYDINOĞLU GROUP</strong>
+      <span>Bərdə mebel salonu</span>
     </div>
+    <a href="./admin/">Admin</a>
+  </footer>
 
-    <template id="productCardTemplate">
-      <article class="product-card reveal">
-        <button class="product-image" type="button">
-          <img alt="" />
-          <span class="stock-badge"></span>
-        </button>
-        <div class="product-body">
-          <div class="product-title-row"><h3></h3><span class="sku"></span></div>
-          <p class="product-desc"></p>
-          <div class="chips"></div>
-          <div class="product-bottom">
-            <strong class="price"></strong>
-            <button class="button ghost details-button">Detallar</button>
-          </div>
+  <div class="floating-actions">
+    <a class="float-btn phone" href="tel:+994502097255" aria-label="Telefon">
+      <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3.1 5.18 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.72c.12.9.33 1.77.62 2.6a2 2 0 0 1-.45 2.11L9 10.7a16 16 0 0 0 4.3 4.3l1.27-1.27a2 2 0 0 1 2.11-.45c.83.29 1.7.5 2.6.62A2 2 0 0 1 22 16.9Z"/></svg>
+    </a>
+    <a class="float-btn whatsapp" href="https://wa.me/994502097254" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24"><path d="M20.5 3.5A11.8 11.8 0 0 0 2.7 17.2L2 22l4.9-1.3A11.8 11.8 0 0 0 22 9.8a11.6 11.6 0 0 0-1.5-6.3ZM12 20a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20Zm4.5-5.9c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5s0-.3 0-.5-.6-1.4-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3s-1 1-1 2.4 1 2.8 1.2 3a9.2 9.2 0 0 0 3.6 3.2c.5.2.9.4 1.2.5.5.2 1 .2 1.4.1.4-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1Z"/></svg>
+    </a>
+    <a class="float-btn social" href="https://www.instagram.com/aydinoglu_mebel_berde?igsh=MTUwZW15OG01dHlweg==" target="_blank" rel="noreferrer" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm6.2-.8h.01"/></svg>
+    </a>
+    <a class="float-btn social" href="https://www.tiktok.com/@aydinoglu_mebel_berde?_r=1&_t=ZS-9781rpFnJX2" target="_blank" rel="noreferrer" aria-label="TikTok">
+      <svg viewBox="0 0 24 24"><path d="M15 3c.4 2.8 2 4.5 5 4.8v3.1a8.2 8.2 0 0 1-5-1.5v6.3A5.3 5.3 0 1 1 9.7 10.4c.4 0 .8 0 1.1.1v3.3a2.1 2.1 0 1 0 1.6 2V3h2.6Z"/></svg>
+    </a>
+  </div>
+
+  <div class="modal" id="productModal" hidden>
+    <div class="modal-bg" data-close-modal></div>
+    <article class="modal-card">
+      <button class="modal-close" data-close-modal>×</button>
+      <div class="modal-gallery">
+        <img id="modalMainImage" alt="" />
+        <div id="modalThumbs" class="modal-thumbs"></div>
+      </div>
+      <div class="modal-info">
+        <span id="modalSku" class="mini-label"></span>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDescription"></p>
+        <div class="specs" id="modalSpecs"></div>
+        <div class="modal-actions">
+          <a class="btn primary" id="modalCall" href="tel:+994502097255">Zəng et</a>
+          <a class="btn soft" id="modalWhatsapp" href="https://wa.me/994502097254" target="_blank" rel="noreferrer">WhatsApp</a>
         </div>
-      </article>
-    </template>
+      </div>
+    </article>
+  </div>
 
-    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
-    <script src="./config.js"></script>
-    <script src="./app.js"></script>
-  </body>
+  <template id="productTemplate">
+    <article class="product-card reveal">
+      <button class="product-img" type="button">
+        <img alt="" />
+        <span class="badge"></span>
+      </button>
+      <div class="product-content">
+        <div class="product-top">
+          <h3></h3>
+          <small></small>
+        </div>
+        <p></p>
+        <div class="chips"></div>
+        <div class="product-bottom">
+          <strong></strong>
+          <button class="details-btn" type="button">Detallar</button>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  <script src="./config.js"></script>
+  <script src="./app.js"></script>
+</body>
 </html>
