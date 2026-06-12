@@ -3,175 +3,183 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AYDINOĞLU GROUP | Mebel Salonu</title>
-  <meta name="description" content="AYDINOĞLU GROUP - Bərdə şəhərində mebel salonu. Qonaq otağı, yataq otağı, mətbəx, ofis və sifarişlə mebel." />
+  <title>AYDINOĞLU GROUP | Premium Mebel Salonu</title>
+  <meta name="description" content="AYDINOĞLU GROUP - Bərdə şəhərində premium mebel salonu. Divan, kreslo, yataq otağı, qonaq otağı və sifarişlə mebel." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-<header class="top">
-  <a class="logo" href="#home">
-    <img src="./Foto/Aydinoglu_mebel_berde_logo.jpg" alt="AYDINOĞLU GROUP">
-    <b>AYDINOĞLU<br>GROUP</b>
-  </a>
+  <header class="lux-header">
+    <a class="brand" href="#home">
+      <img src="./Foto/Aydinoglu_mebel_berde_logo.jpg" alt="AYDINOĞLU GROUP">
+      <span>AYDINOĞLU</span>
+    </a>
 
-  <nav class="nav" id="nav">
-    <a href="#rooms">Otaqlar</a>
-    <a href="#products">Məhsullar</a>
-    <a href="#collections">Kolleksiyalar</a>
-    <a href="#contact">Əlaqə</a>
-  </nav>
+    <nav class="nav" id="nav">
+      <a href="#home">Ana səhifə</a>
+      <a href="#products">Məhsullar</a>
+      <a href="#gallery">Galereya</a>
+      <a href="#about">Haqqımızda</a>
+      <a href="#contact">Əlaqə</a>
+    </nav>
 
-  <div class="top-icons">
-    <button id="searchOpen" aria-label="Axtar">⌕</button>
-    <a href="#contact" aria-label="Profil">♡</a>
-    <a href="./admin/" aria-label="Admin">☻</a>
-    <button id="menuBtn" class="menu">☰</button>
-  </div>
-</header>
+    <a class="quote-btn" href="#contact">Sorğu göndər</a>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </header>
 
-<div class="searchbar">
-  <select id="categorySelect"><option value="all">Mebel stor</option></select>
-  <input id="searchInput" placeholder="Search..." />
-  <button>⌕</button>
-</div>
+  <main id="home">
+    <section class="hero">
+      <img id="heroImage" src="./Foto/Aydinoglu_mebel_berde_logo.jpg" alt="Premium mebel">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Rahatlıq və zəriflik eviniz üçün</h1>
+        <p>AYDINOĞLU GROUP — Bərdədə premium mebel, zövqlü dizayn və keyfiyyətli seçim.</p>
+        <a href="#products">Məhsullara bax</a>
+      </div>
+      <div class="hero-dots"><span></span><span></span><span></span></div>
+    </section>
 
-<main id="home">
-  <section class="hero">
-    <img id="heroImg" src="./Foto/Aydinoglu_mebel_berde_logo.jpg" alt="">
-    <div class="hero-text">
-      <h1>PREMİUM MEBELLƏR: ESTETİKA VƏ KOMFORTUN HARMONİYASI</h1>
-      <p>Otağınızı dəyişəcək kolleksiyanı kəşf edin.</p>
-      <a href="#products">HƏR ŞEYƏ BAXIN</a>
+    <section class="section" id="products">
+      <div class="section-title">
+        <span></span>
+        <h2>Məhsullarımız</h2>
+        <span></span>
+      </div>
+
+      <div class="catalog-tools">
+        <input id="searchInput" type="search" placeholder="Məhsul axtar..." />
+        <select id="categorySelect"></select>
+        <select id="sortSelect">
+          <option value="featured">Seçilmiş</option>
+          <option value="newest">Yeni</option>
+          <option value="priceAsc">Ucuzdan bahaya</option>
+          <option value="priceDesc">Bahadan ucuza</option>
+        </select>
+      </div>
+
+      <div class="tabs" id="categoryTabs"></div>
+      <div class="product-grid" id="productGrid"></div>
+      <p class="empty" id="emptyProducts" hidden>Məhsul tapılmadı.</p>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+      <div class="section-title">
+        <span></span>
+        <h2>Galereya</h2>
+        <span></span>
+      </div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-text">
+        <div class="section-title left">
+          <span></span>
+          <h2>Haqqımızda</h2>
+          <span></span>
+        </div>
+        <h3>Keyfiyyət, komfort və zövq</h3>
+        <p>
+          AYDINOĞLU GROUP Bərdə şəhərində ev və iş məkanları üçün zövqlü, rahat və uzunömürlü mebel seçimləri təqdim edir.
+          Məqsədimiz hər müştəriyə evinə uyğun, estetik və praktik həll tapmaqdır.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="./Foto/Aydinoglu_mebel_berde_logo.jpg" alt="AYDINOĞLU GROUP">
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact-box">
+        <div>
+          <div class="section-title left">
+            <span></span>
+            <h2>Əlaqə</h2>
+            <span></span>
+          </div>
+
+          <form id="leadForm" class="lead-form">
+            <div class="two">
+              <input required name="name" placeholder="Ad Soyad">
+              <input required name="phone" placeholder="Telefon">
+            </div>
+            <select name="product_id" id="leadProductSelect"></select>
+            <textarea name="message" rows="4" placeholder="Mesajınız"></textarea>
+            <button type="submit">Göndər</button>
+            <small id="leadStatus"></small>
+          </form>
+        </div>
+
+        <aside class="contact-info">
+          <p><b>Telefon:</b> <a href="tel:+994502097255">+994 50 209 72 55</a></p>
+          <p><b>WhatsApp:</b> <a href="https://wa.me/994502097254" target="_blank">+994 50 209 72 54</a></p>
+          <p><b>Ünvan:</b> Bərdə Şəhər Bayraq Meydanının yanı</p>
+          <p><b>Instagram:</b> <a href="https://www.instagram.com/aydinoglu_mebel_berde?igsh=MTUwZW15OG01dHlweg==" target="_blank">aydinoglu_mebel_berde</a></p>
+          <p><b>TikTok:</b> <a href="https://www.tiktok.com/@aydinoglu_mebel_berde?_r=1&_t=ZS-9781rpFnJX2" target="_blank">aydinoglu_mebel_berde</a></p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="#home">Ana səhifə</a>
+      <a href="#products">Məhsullar</a>
+      <a href="#gallery">Galereya</a>
+      <a href="#contact">Əlaqə</a>
+      <a href="./admin/">Admin</a>
     </div>
-  </section>
+    <div class="socials">
+      <a href="https://www.instagram.com/aydinoglu_mebel_berde?igsh=MTUwZW15OG01dHlweg==" target="_blank">Instagram</a>
+      <a href="https://www.tiktok.com/@aydinoglu_mebel_berde?_r=1&_t=ZS-9781rpFnJX2" target="_blank">TikTok</a>
+    </div>
+    <p>© 2026 AYDINOĞLU GROUP. Bütün hüquqlar qorunur.</p>
+  </footer>
 
-  <section class="section" id="rooms">
-    <h2>HƏR OTAQ ÜÇÜN HƏLLƏR</h2>
-    <div class="room-grid" id="roomGrid"></div>
-  </section>
+  <div class="float-actions">
+    <a href="tel:+994502097255">☎</a>
+    <a class="wa" href="https://wa.me/994502097254" target="_blank">WhatsApp</a>
+  </div>
 
-  <section class="section" id="collections">
-    <div class="section-title-row">
-      <h2>TÖVSİYƏ OLUNAN KOLLEKSİYALAR</h2>
+  <div class="modal" id="productModal" hidden>
+    <div class="modal-bg" data-close-modal></div>
+    <article class="modal-card">
+      <button class="modal-close" data-close-modal>×</button>
       <div>
-        <button class="round-btn" id="prevFeatured">‹</button>
-        <button class="round-btn" id="nextFeatured">›</button>
+        <img id="modalMainImage" alt="">
+        <div class="thumbs" id="modalThumbs"></div>
       </div>
-    </div>
-    <div class="featured-grid" id="featuredGrid"></div>
-  </section>
-
-  <section class="section" id="products">
-    <div class="section-title-row">
-      <h2>MƏHSULLAR</h2>
-      <select id="sortSelect">
-        <option value="featured">Seçilmiş</option>
-        <option value="newest">Yeni</option>
-        <option value="priceAsc">Ucuzdan bahaya</option>
-        <option value="priceDesc">Bahadan ucuza</option>
-      </select>
-    </div>
-    <div class="tabs" id="categoryTabs"></div>
-    <div class="product-grid" id="productGrid"></div>
-    <p class="empty" id="emptyProducts" hidden>Məhsul tapılmadı.</p>
-  </section>
-
-  <section class="section contact" id="contact">
-    <div>
-      <h2>ƏLAQƏ</h2>
-      <p>Bəyəndiyiniz məhsul üçün sorğu göndərin. Salon əməkdaşı sizinlə əlaqə saxlayacaq.</p>
-      <div class="contact-links">
-        <a href="tel:+994502097255">Telefon: +994 50 209 72 55</a>
-        <a href="https://wa.me/994502097254" target="_blank">WhatsApp: +994 50 209 72 54</a>
-        <a href="https://www.instagram.com/aydinoglu_mebel_berde?igsh=MTUwZW15OG01dHlweg==" target="_blank">Instagram</a>
-        <a href="https://www.tiktok.com/@aydinoglu_mebel_berde?_r=1&_t=ZS-9781rpFnJX2" target="_blank">TikTok</a>
-        <span>Bərdə Şəhər Bayraq Meydanının yanı</span>
+      <div class="modal-info">
+        <small id="modalSku"></small>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <div class="specs" id="modalSpecs"></div>
+        <div class="modal-buttons">
+          <a id="modalCall" href="tel:+994502097255">Zəng et</a>
+          <a id="modalWhatsapp" href="https://wa.me/994502097254" target="_blank">WhatsApp</a>
+        </div>
       </div>
-    </div>
-
-    <form id="leadForm" class="form">
-      <input required name="name" placeholder="Ad Soyad" />
-      <input required name="phone" placeholder="Telefon" />
-      <select name="product_id" id="leadProductSelect"></select>
-      <textarea name="message" rows="4" placeholder="Qeydiniz..."></textarea>
-      <button type="submit">Sorğu göndər</button>
-      <small id="leadStatus"></small>
-    </form>
-  </section>
-</main>
-
-<footer class="footer">
-  <div>
-    <h4>SİTEMAP</h4>
-    <a href="#rooms">Qonaq otağı</a>
-    <a href="#rooms">Yataq otağı</a>
-    <a href="#rooms">Mətbəx</a>
-    <a href="#rooms">Ofis</a>
+    </article>
   </div>
-  <div>
-    <h4>SİTEMAP</h4>
-    <a href="#products">Məhsullar</a>
-    <a href="#collections">Kolleksiyalar</a>
-    <a href="#contact">Əlaqə</a>
-  </div>
-  <div>
-    <h4>ƏLAQƏ</h4>
-    <a href="tel:+994502097255">Telefon</a>
-    <a href="https://wa.me/994502097254" target="_blank">WhatsApp</a>
-    <a href="./admin/">Admin panel</a>
-  </div>
-  <div>
-    <h4>SOSİAL</h4>
-    <a href="https://www.instagram.com/aydinoglu_mebel_berde?igsh=MTUwZW15OG01dHlweg==" target="_blank">Instagram</a>
-    <a href="https://www.tiktok.com/@aydinoglu_mebel_berde?_r=1&_t=ZS-9781rpFnJX2" target="_blank">TikTok</a>
-  </div>
-</footer>
 
-<div class="copyright">© 2026 AYDINOĞLU GROUP. Bütün hüquqlar qorunur.</div>
-
-<div class="float">
-  <a href="tel:+994502097255">☎</a>
-  <a class="wa" href="https://wa.me/994502097254" target="_blank">WhatsApp</a>
-</div>
-
-<div class="modal" id="productModal" hidden>
-  <div class="modal-bg" data-close></div>
-  <article class="modal-box">
-    <button class="modal-close" data-close>×</button>
-    <div>
-      <img id="modalMain" alt="">
-      <div class="thumbs" id="modalThumbs"></div>
-    </div>
-    <div class="modal-info">
-      <small id="modalSku"></small>
-      <h3 id="modalTitle"></h3>
-      <p id="modalDesc"></p>
-      <div class="specs" id="modalSpecs"></div>
-      <div class="modal-actions">
-        <a id="modalCall" href="tel:+994502097255">Zəng et</a>
-        <a id="modalWa" href="https://wa.me/994502097254" target="_blank">WhatsApp</a>
-      </div>
-    </div>
-  </article>
-</div>
-
-<template id="productTemplate">
-  <article class="card">
-    <button class="card-img"><img alt=""><span></span></button>
-    <div class="card-body">
-      <h3></h3>
-      <p></p>
-      <div class="card-meta"></div>
-      <div class="card-bottom">
+  <template id="productTemplate">
+    <article class="product-card">
+      <button class="product-image">
+        <img alt="">
+      </button>
+      <div class="product-body">
+        <h3></h3>
+        <p></p>
         <b></b>
-        <button>Detallar</button>
+        <button>Ətraflı</button>
       </div>
-    </div>
-  </article>
-</template>
+    </article>
+  </template>
 
-<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
-<script src="./config.js"></script>
-<script src="./app.js"></script>
+  <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  <script src="./config.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>
